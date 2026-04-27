@@ -32,8 +32,8 @@ A production-ready e-commerce application with Next.js frontend and NestJS backe
 
 ### Admin Credentials
 
-- Email: admin@apexprecision.com
-- Password: ApexAdmin2024!
+- Email: admin@apexprecision.com / example@admin.com
+- Password: ApexAdmin2024! / admin123
 
 ## Environment Configuration
 
