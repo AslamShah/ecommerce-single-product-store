@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#3a3939",
+                    "on-error": "#690005",
+                    "on-secondary": "#303030",
+                    "on-secondary-container": "#b6b5b4",
+                    "on-tertiary-container": "#292a2a",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed-variant": "#474747",
+                    "tertiary": "#c7c6c6",
+                    "surface-container-highest": "#353534",
+                    "on-primary-container": "#541200",
+                    "on-surface-variant": "#e4beb4",
+                    "outline": "#ab8980",
+                    "on-primary-fixed": "#3b0900",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed": "#e3e2e2",
+                    "surface-container-low": "#1c1b1b",
+                    "primary": "#ffb5a0",
+                    "on-surface": "#e5e2e1",
+                    "surface-container-high": "#2a2a2a",
+                    "inverse-primary": "#b02f00",
+                    "inverse-on-surface": "#313030",
+                    "tertiary-fixed-dim": "#c7c6c6",
+                    "inverse-surface": "#e5e2e1",
+                    "background": "#131313",
+                    "secondary": "#c8c6c6",
+                    "error-container": "#93000a",
+                    "on-primary": "#5f1500",
+                    "on-tertiary": "#2f3031",
+                    "on-tertiary-fixed-variant": "#464747",
+                    "secondary-fixed-dim": "#c8c6c6",
+                    "surface-container": "#201f1f",
+                    "surface-dim": "#131313",
+                    "primary-container": "#ff5722",
+                    "outline-variant": "#5b4039",
+                    "surface-container-lowest": "#0e0e0e",
+                    "tertiary-container": "#919191",
+                    "primary-fixed": "#ffdbd1",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "surface-tint": "#ffb5a0",
+                    "primary-fixed-dim": "#ffb5a0",
+                    "secondary-fixed": "#e4e2e1",
+                    "on-background": "#e5e2e1",
+                    "secondary-container": "#474747",
+                    "surface": "#131313",
+                    "surface-variant": "#353534",
+                    "on-primary-fixed-variant": "#862200"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "edge-margin": "80px",
+                    "unit": "8px",
+                    "container-max": "1440px",
+                    "section-gap": "160px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display-xl": ["Space Grotesk"],
+                    "label-caps": ["Space Grotesk"],
+                    "body-lg": ["Space Grotesk"],
+                    "technical-data": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "body-md": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "technical-data": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #0F0F0F; color: #e5e2e1; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .blueprint-line { background: repeating-linear-gradient(90deg, #2E2E2E 0px, #2E2E2E 1px, transparent 1px, transparent 10px); }
+    </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent dark:bg-[#0F0F0F]/90 backdrop-blur-md border-b border-[#2E2E2E] h-20">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-12 h-full">
+<div class="text-2xl font-black tracking-tighter text-white uppercase">APEX PRECISION</div>
+<div class="hidden md:flex gap-12">
+<a class="font-label-caps text-xs uppercase transition-colors duration-200 text-[#FF5722] border-b border-[#FF5722] pb-1" href="#">SHOP</a>
+<a class="font-label-caps text-xs uppercase transition-colors duration-200 text-white/80 hover:text-[#FF5722]" href="#">TECHNOLOGY</a>
+<a class="font-label-caps text-xs uppercase transition-colors duration-200 text-white/80 hover:text-[#FF5722]" href="#">PERFORMANCE</a>
+<a class="font-label-caps text-xs uppercase transition-colors duration-200 text-white/80 hover:text-[#FF5722]" href="#">SUPPORT</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-white/80 hover:text-[#FF5722] transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-40 max-w-[1440px] mx-auto px-12">
+<!-- Catalog Header -->
+<header class="mb-20 grid grid-cols-12 gap-8 border-l border-[#2E2E2E] pl-8">
+<div class="col-span-12 lg:col-span-8">
+<h1 class="font-display-xl text-display-xl uppercase text-white mb-4">Master Catalog</h1>
+<p class="font-body-lg text-body-lg text-zinc-500 max-w-2xl">
+                    Engineered for the elite. Explore our full suite of precision grooming instruments, industrial-grade blades, and professional maintenance systems.
+                </p>
+</div>
+<div class="col-span-12 lg:col-span-4 flex items-end justify-end">
+<div class="font-technical-data text-technical-data text-[#FF5722] flex items-center gap-2">
+<span class="w-2 h-2 bg-[#FF5722] rounded-full"></span>
+                    SHOWING 24 PERFORMANCE TOOLS
+                </div>
+</div>
+</header>
+<div class="grid grid-cols-12 gap-12">
+<!-- Filter Sidebar -->
+<aside class="col-span-12 lg:col-span-3 space-y-12">
+<div class="border-t border-[#2E2E2E] pt-8">
+<h3 class="font-label-caps text-label-caps text-white mb-6">SYSTEM CATEGORIES</h3>
+<ul class="space-y-4">
+<li><a class="font-technical-data text-technical-data text-[#FF5722] flex justify-between" href="#">ALL INSTRUMENTS <span class="text-zinc-600">24</span></a></li>
+<li><a class="font-technical-data text-technical-data text-zinc-500 hover:text-white flex justify-between" href="#">CLIPPERS <span class="text-zinc-600">08</span></a></li>
+<li><a class="font-technical-data text-technical-data text-zinc-500 hover:text-white flex justify-between" href="#">TRIMMERS <span class="text-zinc-600">06</span></a></li>
+<li><a class="font-technical-data text-technical-data text-zinc-500 hover:text-white flex justify-between" href="#">PRECISION BLADES <span class="text-zinc-600">04</span></a></li>
+<li><a class="font-technical-data text-technical-data text-zinc-500 hover:text-white flex justify-between" href="#">MAINTENANCE KITS <span class="text-zinc-600">06</span></a></li>
+</ul>
+</div>
+<div class="border-t border-[#2E2E2E] pt-8">
+<h3 class="font-label-caps text-label-caps text-white mb-6">TECHNICAL SPECS</h3>
+<div class="space-y-4">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded-none bg-transparent border-[#2E2E2E] text-[#FF5722] focus:ring-[#FF5722]" type="checkbox"/>
+<span class="font-technical-data text-technical-data text-zinc-500 group-hover:text-white">Cordless (Li-Ion)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded-none bg-transparent border-[#2E2E2E] text-[#FF5722] focus:ring-[#FF5722]" type="checkbox"/>
+<span class="font-technical-data text-technical-data text-zinc-500 group-hover:text-white">Brushless Motor</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded-none bg-transparent border-[#2E2E2E] text-[#FF5722] focus:ring-[#FF5722]" type="checkbox"/>
+<span class="font-technical-data text-technical-data text-zinc-500 group-hover:text-white">Titanium Plated</span>
+</label>
+</div>
+</div>
+<div class="bg-[#1A1A1A] border border-[#2E2E2E] p-6">
+<h4 class="font-label-caps text-label-caps text-white mb-2">APEX MEMBERSHIP</h4>
+<p class="font-technical-data text-technical-data text-zinc-500 mb-6">Unlock priority servicing and technical support.</p>
+<button class="w-full bg-white text-black font-label-caps text-[10px] py-3 hover:bg-[#FF5722] hover:text-white transition-all">SIGN UP</button>
+</div>
+</aside>
+<!-- Product Grid -->
+<section class="col-span-12 lg:col-span-9">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="group relative bg-[#1A1A1A] border border-[#2E2E2E] flex flex-col">
+<div class="aspect-[4/5] bg-[#0F0F0F] relative overflow-hidden">
+<img alt="Pro Clipper" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="Close-up of professional silver hair clipper on a dark textured background with dramatic spotlighting and sharp metallic details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb4MP4qXAG5kUYy-odkqWejISfrRhPhXRivVOg4THqnUlxePZbQ_36v45WM2Oz0B2TV768YqKUCGa0sbZTPNB_xq9AeuB9BjdtmpqYV-uXErmPldugqOTB7H-k80Uk9beZsrz1V1Kg8pO8cLaaQYYGxJX7RiQG7YpRI0AiHZrL0kt5EzMJFDGbN3S6n_MJ7nh1yZgDD-eibUEnmeSstra5KHIdTPyOb85F8CaTpT6-eXocYYUSLKxp4xBXHDiriBQSGpV7YQxpJcc"/>
+<div class="absolute top-4 left-4 font-technical-data text-[10px] bg-[#FF5722] text-black px-2 py-1">CORE SERIES</div>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<h2 class="font-headline-md text-white mb-2 uppercase tracking-tight">Apex-01 Clipper</h2>
+<p class="font-technical-data text-zinc-500 text-sm mb-6">9,000 RPM Brushless Motor / Carbon Blade</p>
+</div>
+<div class="flex justify-between items-center border-t border-[#2E2E2E] pt-6">
+<span class="font-headline-md text-[#FF5722] text-2xl">$249.00</span>
+<button class="font-label-caps text-[10px] text-white hover:text-[#FF5722] flex items-center gap-2">
+                                    ADD TO GEAR <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative bg-[#1A1A1A] border border-[#2E2E2E] flex flex-col">
+<div class="aspect-[4/5] bg-[#0F0F0F] relative overflow-hidden">
+<img alt="Apex Trimmer" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="Matte black professional trimmer standing upright on dark marble surface with sleek industrial design and orange accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYIE7OJRR-Voqw-txbcyBkQFNWEgsioW4_lDlSwEkWY7Epnm6nlu0kxBMPCL349h4oIHQIPlqSSNlpzhCYwSw4MgnvwAkAjWl6P4LU7jf6gfUpCraQ8kXcSSKSVQKcS-rNxef40vUCGv18Gc39FRj1OhwfmLKJrj20arSDTOkUhFwvojTWLKVwSyQS2YT8y3JexGcX-ER71tinsy6bCOzjSCAl7YWY7SVdXSwTqiBBWVqnz2-VAbsi6bGAKsIXpKOj43fnEhbkxD4"/>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<h2 class="font-headline-md text-white mb-2 uppercase tracking-tight">Shadow Trimmer</h2>
+<p class="font-technical-data text-zinc-500 text-sm mb-6">Zero-gap T-Blade / 4-Hour Battery Life</p>
+</div>
+<div class="flex justify-between items-center border-t border-[#2E2E2E] pt-6">
+<span class="font-headline-md text-[#FF5722] text-2xl">$189.00</span>
+<button class="font-label-caps text-[10px] text-white hover:text-[#FF5722] flex items-center gap-2">
+                                    ADD TO GEAR <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative bg-[#1A1A1A] border border-[#2E2E2E] flex flex-col">
+<div class="aspect-[4/5] bg-[#0F0F0F] relative overflow-hidden">
+<img alt="Blades Kit" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="Precision hair clipper blades laid out in a row on a black surgical cloth with surgical steel reflection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_EXf_1_aB6h1VCAlm8iGQVvw9Vd9psZFxlwTIyIBU7iYcePv3F3KgkVU8Fddca_YPQsq3lP72Y4gcFlbzVyCl-iwI5e-4OSczncEcYmdQFvxOPXWz2VMth8oJHIFzk45MhFT2SH_oOGjDbT-WQLiAgzVyoUzg-WHmpah83mGqj6li6nbLdOJtwrmrIpZ5pPqd3dyD0SQY7ZFwIfYSazqqQ1_UA3e22-dyWcECS-lFydKu7sVhKc3zasZNMOxwie927Y37gpM1Upg"/>
+<div class="absolute top-4 left-4 font-technical-data text-[10px] border border-white text-white px-2 py-1">REPLACEMENT</div>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<h2 class="font-headline-md text-white mb-2 uppercase tracking-tight">X-Blade Set</h2>
+<p class="font-technical-data text-zinc-500 text-sm mb-6">Cryogenic Steel / High Heat Resistance</p>
+</div>
+<div class="flex justify-between items-center border-t border-[#2E2E2E] pt-6">
+<span class="font-headline-md text-[#FF5722] text-2xl">$45.00</span>
+<button class="font-label-caps text-[10px] text-white hover:text-[#FF5722] flex items-center gap-2">
+                                    ADD TO GEAR <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative bg-[#1A1A1A] border border-[#2E2E2E] flex flex-col">
+<div class="aspect-[4/5] bg-[#0F0F0F] relative overflow-hidden">
+<img alt="Maintenance Oil" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="Amber glass bottle of premium clipper oil with a dropper against a dark concrete background with moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOxfl5ZLq2a-rfwzB94LTkcAZnwoIHUZe0_mA3p-PIQisXnjFR2W182ndtfXbYtxVRMFK4cTnzy69yhff5HDIbPABYeF1NMeyhKXZAaubswuw27Dl68ONIsUUh6uoDmnJxPvRJ_asu2uampVIbwBEoQuJv3HQPaD0ZiXXrK9SKE2Xz2N9_S4TSY03I4RUh8cBPqW5aLJWrj9HAZa9aaLeqoK1ShgiPzdc0xOVA-7kK6kC8Wghq-rYsU9XwFIu9pgbuDc8IloY7jhg"/>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<h2 class="font-headline-md text-white mb-2 uppercase tracking-tight">Glide Oil 4oz</h2>
+<p class="font-technical-data text-zinc-500 text-sm mb-6">Anti-Corrosive / High Viscosity Formula</p>
+</div>
+<div class="flex justify-between items-center border-t border-[#2E2E2E] pt-6">
+<span class="font-headline-md text-[#FF5722] text-2xl">$15.00</span>
+<button class="font-label-caps text-[10px] text-white hover:text-[#FF5722] flex items-center gap-2">
+                                    ADD TO GEAR <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Featured Promo Card -->
+<div class="group relative bg-[#FF5722] border border-[#FF5722] flex flex-col md:col-span-2 overflow-hidden">
+<div class="absolute inset-0 blueprint-line opacity-10"></div>
+<div class="flex flex-col md:flex-row h-full">
+<div class="p-12 flex-1 flex flex-col justify-center">
+<span class="font-label-caps text-black text-[10px] mb-4">LIMITED EDITION RELEASE</span>
+<h2 class="font-display-xl text-4xl text-black uppercase mb-6 leading-none">Apex Chrome Edition</h2>
+<p class="font-technical-data text-black/80 mb-8 max-w-sm">The pinnacle of engineering meets automotive aesthetics. Polished chrome finish with 12,000 RPM core.</p>
+<button class="w-fit bg-black text-white font-label-caps py-4 px-10 hover:bg-white hover:text-black transition-colors">SECURE UNIT</button>
+</div>
+<div class="md:w-1/2 relative bg-black/10">
+<img alt="Chrome Clipper" class="w-full h-full object-cover mix-blend-multiply" data-alt="Extreme close up of a chrome finished hair clipper reflecting neon lights in a dark futuristic studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZHiiI9rtPRKXuBkZqYdD8kjhUnq8mtospsSFqRvBPL636WDmmXS_jx1LwFpNHiKABsFt6aNGianbwJTCEqXQAnneztEx2iE3ZzH8g9JDSMHzL5Id1DapNLhjFcjdXg86IMvAurCBdtd4vdcVnOKFx0E1-KtA48n-cYOQk5qVLUaUpEt0KG7IDLJ7_xR1Rg_UuJxUZkgtnzUElg4YBNZ01A5Nb6DYNfZ34S_q4yC0WlKJJ-uhpYjn5vaa11D_ahEREU0G1WBpSmgk"/>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group relative bg-[#1A1A1A] border border-[#2E2E2E] flex flex-col">
+<div class="aspect-[4/5] bg-[#0F0F0F] relative overflow-hidden">
+<img alt="Charging Station" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="Industrial sleek charging dock station for grooming tools with orange LED indicator lights on a brushed metal finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADCsrfZhDCyjDVmwhAkz7OAUlCCcUVOuYxJG9qCR1OryFgjEatYvJ-ZwU-wwDaAMsIbzsMRvAIylnUY4ZJwJoKLmRkhPobokihn9O-GyrxqqsGLu_NUtc7T63lMcFA_78WCX4iZmFWHZbLX7VbRI16zjaKtVJIIJGMOQ3dq-ISPJALf9BXpJ-3kkOq0iXIOj249ulTRS5XvLjvfp4IKQBCb0KZDeDqtFe1Y_DF9jTe_nTsp4e46Q3qHfq0G5uNq8S7H4Uy2kvjcJ4"/>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<h2 class="font-headline-md text-white mb-2 uppercase tracking-tight">Mag-Dock Station</h2>
+<p class="font-technical-data text-zinc-500 text-sm mb-6">Magnetic Universal Charging / Heavy-Base</p>
+</div>
+<div class="flex justify-between items-center border-t border-[#2E2E2E] pt-6">
+<span class="font-headline-md text-[#FF5722] text-2xl">$79.00</span>
+<button class="font-label-caps text-[10px] text-white hover:text-[#FF5722] flex items-center gap-2">
+                                    ADD TO GEAR <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center items-center gap-4">
+<button class="w-12 h-12 border border-[#2E2E2E] flex items-center justify-center text-white hover:border-[#FF5722] transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<div class="flex gap-2">
+<button class="w-12 h-12 bg-[#FF5722] text-black font-label-caps">01</button>
+<button class="w-12 h-12 border border-[#2E2E2E] text-zinc-500 font-label-caps hover:text-white transition-colors">02</button>
+<button class="w-12 h-12 border border-[#2E2E2E] text-zinc-500 font-label-caps hover:text-white transition-colors">03</button>
+</div>
+<button class="w-12 h-12 border border-[#2E2E2E] flex items-center justify-center text-white hover:border-[#FF5722] transition-colors">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Tech Specs Detail Section (Editorial Break) -->
+<section class="bg-[#1A1A1A] py-32 border-y border-[#2E2E2E] overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-12 grid grid-cols-12 gap-12 items-center">
+<div class="col-span-12 lg:col-span-5">
+<span class="font-label-caps text-[#FF5722] mb-6 block">ENGINEERING EXCELLENCE</span>
+<h2 class="font-headline-lg text-white uppercase mb-8 leading-tight">The Anatomy of Precision.</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="font-display-xl text-white/10 text-4xl leading-none">01</div>
+<div>
+<h4 class="font-label-caps text-white mb-2">VECTOR MOTORS</h4>
+<p class="font-technical-data text-zinc-500">Auto-torque technology detects resistance and adjusts RPM in real-time.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="font-display-xl text-white/10 text-4xl leading-none">02</div>
+<div>
+<h4 class="font-label-caps text-white mb-2">DIAMOND CARBON</h4>
+<p class="font-technical-data text-zinc-500">Blades stay cooler and sharper 4x longer than standard stainless steel.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-7 relative">
+<div class="absolute -inset-20 blueprint-line opacity-5 rotate-12"></div>
+<img alt="Technical Diagram" class="w-full grayscale brightness-50 contrast-125" data-alt="Exploded view diagram style photo of a hair clipper showing internal motor and blade mechanism with industrial blueprint lines overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQdr497k2MaS14xBrqAGbAdqrbgHAba6amu-5JNkNL9YPiFlU3ogYQRK16IIyTsriD8ktykVe2qvk34s980oqIXVwhOdv460AWB1tS3tuCIEPEg4XcKjBhMkyvBGWDWpSgWViCWCRCZ2gTMGElBVa3nii7kfIeIZFxQaeq0Ekf45XyOvq2lEjVmywmXilQAF_RhlyVAYT3F5N29z6bIqr8ambZswoyMZBYImNvii4F1RtMWe8djFT_2ZiDvTBZqKw5OWp2VARGkFU"/>
+<!-- UI Callouts -->
+<div class="absolute top-1/4 right-1/4 border-l border-[#FF5722] pl-4">
+<div class="font-label-caps text-[10px] text-[#FF5722]">RPM SENSOR</div>
+<div class="w-2 h-2 bg-[#FF5722] rounded-full absolute -left-[4.5px] top-0"></div>
+</div>
+<div class="absolute bottom-1/3 left-1/4 border-r border-[#FF5722] pr-4 text-right">
+<div class="font-label-caps text-[10px] text-[#FF5722]">LITHIUM CORE</div>
+<div class="w-2 h-2 bg-[#FF5722] rounded-full absolute -right-[4.5px] top-0"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0F0F0F] w-full border-t border-[#2E2E2E]">
+<div class="max-w-[1440px] mx-auto px-12 py-24 grid grid-cols-12 gap-8">
+<div class="col-span-12 lg:col-span-4">
+<div class="text-white font-black text-xl mb-8 uppercase">APEX PRECISION</div>
+<p class="font-technical-data text-zinc-500 text-xs max-w-xs leading-relaxed">
+                    Designed and engineered for the world's most demanding barbers. We push the limits of what grooming tools can achieve through technical innovation.
+                </p>
+</div>
+<div class="col-span-6 lg:col-span-2">
+<h5 class="font-label-caps text-white mb-6">NAVIGATE</h5>
+<ul class="space-y-4 font-technical-data text-[10px] tracking-widest text-zinc-500 uppercase">
+<li><a class="hover:text-white transition-all" href="#">Collections</a></li>
+<li><a class="hover:text-white transition-all" href="#">Technology</a></li>
+<li><a class="hover:text-white transition-all" href="#">Support</a></li>
+<li><a class="hover:text-white transition-all" href="#">Professionals</a></li>
+</ul>
+</div>
+<div class="col-span-6 lg:col-span-2">
+<h5 class="font-label-caps text-white mb-6">RESOURCES</h5>
+<ul class="space-y-4 font-technical-data text-[10px] tracking-widest text-zinc-500 uppercase">
+<li><a class="hover:text-white transition-all" href="#">WARRANTY</a></li>
+<li><a class="hover:text-white transition-all" href="#">PRIVACY</a></li>
+<li><a class="hover:text-white transition-all" href="#">TERMS</a></li>
+<li><a class="hover:text-white transition-all" href="#">CONTACT</a></li>
+</ul>
+</div>
+<div class="col-span-12 lg:col-span-4">
+<h5 class="font-label-caps text-white mb-6">TECHNICAL BRIEF</h5>
+<div class="flex">
+<input class="bg-transparent border border-[#2E2E2E] border-r-0 px-4 py-3 w-full font-technical-data text-[10px] focus:outline-none focus:border-[#FF5722] text-white" placeholder="ENTER EMAIL FOR UPDATES" type="email"/>
+<button class="bg-[#FF5722] text-black px-6 font-label-caps text-[10px]">JOIN</button>
+</div>
+</div>
+<div class="col-span-12 mt-16 pt-8 border-t border-[#2E2E2E]">
+<p class="font-technical-data text-[10px] tracking-[0.2em] uppercase text-zinc-500">
+                    © 2024 APEX PRECISION GROOMING. ENGINEERED FOR PROFESSIONAL PERFORMANCE.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

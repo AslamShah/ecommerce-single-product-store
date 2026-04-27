@@ -1,0 +1,40 @@
+{
+  "name": "ecommerce-single-product-store",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "next dev",
+    "dev:backend": "cd backend && npm run start:dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:frontend": "next build",
+    "build:backend": "cd backend && npm run build",
+    "start": "next start",
+    "start:backend": "cd backend && npm run start:prod",
+    "start:prod": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:frontend": "next start",
+    "lint": "eslint",
+    "test": "echo \"No tests configured yet\""
+  },
+  "dependencies": {
+    "@stripe/react-stripe-js": "^3.1.1",
+    "@stripe/stripe-js": "^5.5.0",
+    "axios": "^1.7.9",
+    "clsx": "^2.1.1",
+    "concurrently": "^8.2.2",
+    "next": "16.2.4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

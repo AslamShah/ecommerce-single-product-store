@@ -1,0 +1,36 @@
+{
+  "name": "Apex Precision E-Commerce",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "forwardPorts": [3000, 3001],
+  "portsAttributes": {
+    "3000": {
+      "label": "Frontend (Next.js)",
+      "onAutoForward": "openPreview"
+    },
+    "3001": {
+      "label": "Backend (NestJS)",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "npm install && cd backend && npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "qwtbrackets.brackets-colorizer"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "postAttachCommand": "",
+  "launchConfigurations": []
+}

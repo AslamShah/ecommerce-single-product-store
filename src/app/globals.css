@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+@theme {
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-geist-sans: var(--font-geist-sans);
+  --font-geist-mono: var(--font-geist-mono);
+
+  --color-background: #131313;
+  --color-foreground: #e5e2e1;
+  --color-surface: #0F0F0F;
+  --color-surface-bright: #3a3939;
+  --color-surface-container: #201f1f;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-primary: #FF5722;
+  --color-on-primary: #0F0F0F;
+  --color-secondary: #c8c6c6;
+  --color-outline: #2E2E2E;
+  --color-tertiary: #8E8E8E;
+  --color-zinc-500: #71717a;
+  --color-zinc-800: #27272a;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-600: #52525b;
+
+  --spacing-section-gap: 160px;
+  --spacing-container-max: 1440px;
+  --spacing-edge-margin: 80px;
+  --spacing-gutter: 24px;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-outline);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-foreground);
+    font-family: var(--font-space-grotesk);
+  }
+}
+
+@layer components {
+  .technical-border {
+    border: 1px solid var(--color-outline);
+  }
+
+  .font-display-xl {
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+  }
+
+  .font-headline-lg {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
+  .font-headline-md {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+
+  .font-body-lg {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    font-weight: 400;
+  }
+
+  .font-body-md {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    font-weight: 400;
+  }
+
+  .font-label-caps {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .font-technical-data {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+  }
+
+  .crosshair {
+    position: relative;
+  }
+
+  .crosshair::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    background: var(--color-tertiary);
+    left: -50px;
+    top: 50%;
+  }
+
+  .blueprint-line {
+    background: repeating-linear-gradient(
+      90deg,
+      var(--color-outline) 0px,
+      var(--color-outline) 1px,
+      transparent 1px,
+      transparent 10px
+    );
+  }
+
+  .blueprint-line-diagonal {
+    border-left: 1px solid var(--color-outline);
+    border-bottom: 1px solid var(--color-outline);
+  }
+
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    padding: 1.25rem 2.5rem;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+
+  .btn-primary:hover {
+    background-color: #e64a19;
+    transform: scale(0.98);
+  }
+
+  .btn-secondary {
+    border: 2px solid var(--color-outline);
+    color: white;
+    padding: 1.25rem 2.5rem;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--color-primary);
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 4px;
+    background: var(--color-outline);
+  }
+
+  .progress-bar-fill {
+    height: 100%;
+    background: var(--color-primary);
+  }
+}
+
+@layer utilities {
+  .text-display-xl {
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+  }
+
+  .text-headline-lg {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+  }
+
+  .text-headline-md {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+
+  .text-body-lg {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0em;
+    font-weight: 400;
+  }
+
+  .text-body-md {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    font-weight: 400;
+  }
+
+  .text-label-caps {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .text-technical-data {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+  }
+
+  .tracking-caps {
+    letter-spacing: 0.1em;
+  }
+
+  .tracking-widest {
+    letter-spacing: 0.15em;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}

@@ -1,0 +1,50 @@
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import { HealthCheck, ServiceStatus } from './common/interfaces/health.interface';
+
+@Injectable()
+export class HealthService {
+  constructor(
+    @InjectModel('Setting') private readonly settingModel: Model<any>,
+  ) {}
+
+  async check(): Promise<HealthCheck> {
+    const services: Record<string, ServiceStatus> = {};
+
+    // Check MongoDB connection
+    try {
+      // Try a simple operation to verify connection
+      await this.settingModel.countDocuments({});
+      services.mongodb = { status: 'UP', details: 'Database connection successful' };
+    } catch (error) {
+      services.mongodb = { status: 'DOWN', details: error.message };
+    }
+
+    const allUp = Object.values(services).every(s => s.status === 'UP');
+    
+    return {
+      status: allUp ? 'ok' : 'degraded',
+      timestamp: new Date().toISOString(),
+      uptime: process.uptime(),
+      environment: process.env.NODE_ENV || 'development',
+      services,
+      version: '1.0.0',
+    };
+  }
+
+  async ready(): Promise<HealthCheck> {
+    const check = await this.check();
+    const isReady = check.status === 'ok';
+    
+    if (!isReady) {
+      throw new HttpException({
+        status: 'not ready',
+        timestamp: new Date().toISOString(),
+        services: check.services,
+      }, HttpStatus.SERVICE_UNAVAILABLE);
+    }
+    
+    return check;
+  }
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#3a3939",
+                    "on-error": "#690005",
+                    "on-secondary": "#303030",
+                    "on-secondary-container": "#b6b5b4",
+                    "on-tertiary-container": "#292a2a",
+                    "error": "#ffb4ab",
+                    "on-secondary-fixed-variant": "#474747",
+                    "tertiary": "#c7c6c6",
+                    "surface-container-highest": "#353534",
+                    "on-primary-container": "#541200",
+                    "on-surface-variant": "#e4beb4",
+                    "outline": "#ab8980",
+                    "on-primary-fixed": "#3b0900",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed": "#e3e2e2",
+                    "surface-container-low": "#1c1b1b",
+                    "primary": "#ffb5a0",
+                    "on-surface": "#e5e2e1",
+                    "surface-container-high": "#2a2a2a",
+                    "inverse-primary": "#b02f00",
+                    "inverse-on-surface": "#313030",
+                    "tertiary-fixed-dim": "#c7c6c6",
+                    "inverse-surface": "#e5e2e1",
+                    "background": "#131313",
+                    "secondary": "#c8c6c6",
+                    "error-container": "#93000a",
+                    "on-primary": "#5f1500",
+                    "on-tertiary": "#2f3031",
+                    "on-tertiary-fixed-variant": "#464747",
+                    "secondary-fixed-dim": "#c8c6c6",
+                    "surface-container": "#201f1f",
+                    "surface-dim": "#131313",
+                    "primary-container": "#ff5722",
+                    "outline-variant": "#5b4039",
+                    "surface-container-lowest": "#0e0e0e",
+                    "tertiary-container": "#919191",
+                    "primary-fixed": "#ffdbd1",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "surface-tint": "#ffb5a0",
+                    "primary-fixed-dim": "#ffb5a0",
+                    "secondary-fixed": "#e4e2e1",
+                    "on-background": "#e5e2e1",
+                    "secondary-container": "#474747",
+                    "surface": "#131313",
+                    "surface-variant": "#353534",
+                    "on-primary-fixed-variant": "#862200"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "edge-margin": "80px",
+                    "unit": "8px",
+                    "container-max": "1440px",
+                    "section-gap": "160px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display-xl": ["Space Grotesk"],
+                    "label-caps": ["Space Grotesk"],
+                    "body-lg": ["Space Grotesk"],
+                    "technical-data": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "body-md": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "technical-data": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0F0F0F;
+            color: #e5e2e1;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background min-h-screen">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-transparent dark:bg-[#0F0F0F]/90 backdrop-blur-md border-b border-[#2E2E2E]">
+<nav class="flex justify-between items-center max-w-[1440px] mx-auto px-12 h-20">
+<div class="text-2xl font-black tracking-tighter text-white uppercase">APEX PRECISION</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] font-bold tracking-[0.15em] text-xs uppercase text-white/80 hover:text-[#FF5722] transition-colors duration-200" href="#">SHOP</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-[0.15em] text-xs uppercase text-white/80 hover:text-[#FF5722] transition-colors duration-200" href="#">TECHNOLOGY</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-[0.15em] text-xs uppercase text-white/80 hover:text-[#FF5722] transition-colors duration-200" href="#">PERFORMANCE</a>
+<a class="font-['Space_Grotesk'] font-bold tracking-[0.15em] text-xs uppercase text-white/80 hover:text-[#FF5722] transition-colors duration-200" href="#">SUPPORT</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-white hover:text-[#FF5722] transition-all scale-95 active:opacity-80">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-24 max-w-[1440px] mx-auto px-12">
+<!-- Checkout Progress Bar -->
+<div class="mb-16">
+<div class="flex justify-between max-w-3xl mx-auto relative">
+<!-- Line background -->
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-[#2E2E2E] -z-10"></div>
+<!-- Step 1 -->
+<div class="flex flex-col items-center gap-3">
+<div class="w-10 h-10 flex items-center justify-center bg-[#FF5722] border border-[#FF5722] text-[#0F0F0F] font-bold">1</div>
+<span class="font-label-caps text-label-caps text-[#FF5722]">SHIPPING</span>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center gap-3">
+<div class="w-10 h-10 flex items-center justify-center bg-[#1A1A1A] border border-[#2E2E2E] text-white/40 font-bold">2</div>
+<span class="font-label-caps text-label-caps text-white/40">PAYMENT</span>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center gap-3">
+<div class="w-10 h-10 flex items-center justify-center bg-[#1A1A1A] border border-[#2E2E2E] text-white/40 font-bold">3</div>
+<span class="font-label-caps text-label-caps text-white/40">REVIEW</span>
+</div>
+</div>
+</div>
+<!-- Main Checkout Layout -->
+<div class="grid grid-cols-12 gap-16 items-start">
+<!-- Left Column: Forms -->
+<div class="col-span-12 lg:col-span-7 space-y-12">
+<!-- Section Header -->
+<div>
+<h1 class="font-headline-lg text-headline-lg mb-4 text-white">SECURE CHECKOUT</h1>
+<p class="font-body-md text-body-md text-zinc-400">ENGINEERED FOR PRECISION LOGISTICS. ENTER YOUR DISPATCH DETAILS BELOW.</p>
+</div>
+<!-- Shipping Form -->
+<form class="space-y-10">
+<div class="space-y-6">
+<h2 class="font-label-caps text-label-caps text-[#FF5722] border-b border-[#2E2E2E] pb-2">01. RECIPIENT INFORMATION</h2>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-[10px] text-zinc-500 block">FIRST NAME</label>
+<input class="w-full bg-[#1A1A1A] border border-[#2E2E2E] p-4 text-white font-technical-data focus:border-[#FF5722] focus:ring-0 outline-none transition-all" placeholder="GORDON" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[10px] text-zinc-500 block">LAST NAME</label>
+<input class="w-full bg-[#1A1A1A] border border-[#2E2E2E] p-4 text-white font-technical-data focus:border-[#FF5722] focus:ring-0 outline-none transition-all" placeholder="MURRAY" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-[10px] text-zinc-500 block">EMAIL ADDRESS</label>
+<input class="w-full bg-[#1A1A1A] border border-[#2E2E2E] p-4 text-white font-technical-data focus:border-[#FF5722] focus:ring-0 outline-none transition-all" placeholder="G.MURRAY@ENGINEERING.COM" type="email"/>
+</div>
+</div>
+<div class="space-y-6">
+<h2 class="font-label-caps text-label-caps text-[#FF5722] border-b border-[#2E2E2E] pb-2">02. DISPATCH ADDRESS</h2>
+<div class="space-y-2">
+<label class="font-label-caps text-[10px] text-zinc-500 block">STREET ADDRESS</label>
+<input class="w-full bg-[#1A1A1A] border border-[#2E2E2E] p-4 text-white font-technical-data focus:border-[#FF5722] focus:ring-0 outline-none transition-all" placeholder="101 TITANIUM WAY" type="text"/>
+</div>
+<div class="grid grid-cols-3 gap-6">
+<div class="col-span-1 space-y-2">
+<label class="font-label-caps text-[10px] text-zinc-500 block">CITY</label>
+<input class="w-full bg-[#1A1A1A] border border-[#2E2E2E] p-4 text-white font-technical-data focus:border-[#FF5722] focus:ring-0 outline-none transition-all" placeholder="SILICON VALLEY" type="text"/>
+</div>
+<div class="col-span-1 space-y-2">
+<label class="font-label-caps text-[10px] text-zinc-500 block">STATE</label>
+<select class="w-full bg-[#1A1A1A] border border-[#2E2E2E] p-4 text-white font-technical-data focus:border-[#FF5722] focus:ring-0 outline-none transition-all">
+<option>CALIFORNIA</option>
+<option>TEXAS</option>
+<option>NEVADA</option>
+</select>
+</div>
+<div class="col-span-1 space-y-2">
+<label class="font-label-caps text-[10px] text-zinc-500 block">ZIP CODE</label>
+<input class="w-full bg-[#1A1A1A] border border-[#2E2E2E] p-4 text-white font-technical-data focus:border-[#FF5722] focus:ring-0 outline-none transition-all" placeholder="94025" type="text"/>
+</div>
+</div>
+</div>
+<div class="space-y-6">
+<h2 class="font-label-caps text-label-caps text-[#FF5722] border-b border-[#2E2E2E] pb-2">03. LOGISTICS METHOD</h2>
+<div class="grid grid-cols-1 gap-4">
+<label class="flex items-center justify-between p-6 bg-[#1A1A1A] border border-[#FF5722] cursor-pointer group">
+<div class="flex items-center gap-4">
+<input checked="" class="text-[#FF5722] focus:ring-0 bg-transparent border-[#2E2E2E]" name="shipping" type="radio"/>
+<div>
+<div class="font-bold text-white text-sm">STANDARD EXPEDITED</div>
+<div class="text-[10px] text-zinc-500 uppercase tracking-widest">3-5 BUSINESS DAYS</div>
+</div>
+</div>
+<div class="font-technical-data text-white">FREE</div>
+</label>
+<label class="flex items-center justify-between p-6 bg-[#1A1A1A] border border-[#2E2E2E] cursor-pointer hover:border-[#FF5722] transition-all group">
+<div class="flex items-center gap-4">
+<input class="text-[#FF5722] focus:ring-0 bg-transparent border-[#2E2E2E]" name="shipping" type="radio"/>
+<div>
+<div class="font-bold text-white text-sm">NEXT-DAY PRECISION</div>
+<div class="text-[10px] text-zinc-500 uppercase tracking-widest">GUARANTEED BY 10AM</div>
+</div>
+</div>
+<div class="font-technical-data text-white">$25.00</div>
+</label>
+</div>
+</div>
+<button class="w-full py-6 bg-[#FF5722] text-[#0F0F0F] font-label-caps text-sm tracking-[0.2em] hover:bg-[#FF7043] transition-all" type="submit">
+                        CONTINUE TO PAYMENT
+                    </button>
+</form>
+</div>
+<!-- Right Column: Order Summary -->
+<div class="col-span-12 lg:col-span-5">
+<div class="bg-[#1A1A1A] border border-[#2E2E2E] p-10 sticky top-32">
+<h2 class="font-label-caps text-label-caps text-white mb-8 border-b border-[#2E2E2E] pb-4">ORDER SPECIFICATIONS</h2>
+<!-- Product List -->
+<div class="space-y-8 mb-10">
+<div class="flex gap-6">
+<div class="w-24 h-24 bg-[#0F0F0F] border border-[#2E2E2E] flex-shrink-0 p-2">
+<img alt="APEX X-1 Professional Trimmer" class="w-full h-full object-cover grayscale brightness-75" data-alt="Close-up of a matte black professional hair trimmer with orange accents, industrial design, studio lighting on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzSgNSL_D4cmJzIrtaVoA-38Lz50uHroAZxb_tYfGQ_hvx7vicgFOWbBbiZ_C73MpySnc2WmJCtMygATqbRPko1SXyUbzJWiAe-TVG-QF15runjuRNCRASPTslcOcHw05yaa7p3NqR1GD9sZQrmOSJ1rxOGZD_w445JX5w2EKVfZoOuknz7vksSJ9GeIatrH3r5pFy7kw9CObewySTzurb7EozZnkeKetcvBjwolXsomyLMxmSseRq6gbbsC3n4uQXbM3tv4Xer2M"/>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<div class="font-bold text-white text-sm uppercase tracking-wider">APEX X-1 PRECISION TRIMMER</div>
+<div class="text-[10px] text-zinc-500 font-label-caps mt-1">S/N: 9942-B-ALPHA</div>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-[10px] text-zinc-500 font-label-caps">QTY: 01</span>
+<span class="font-technical-data text-white">$189.00</span>
+</div>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-24 h-24 bg-[#0F0F0F] border border-[#2E2E2E] flex-shrink-0 p-2">
+<img alt="Titanium Blade Set" class="w-full h-full object-cover grayscale brightness-75" data-alt="Macro shot of carbon steel hair clipper blades, sharp precision edges, metallic texture, cold industrial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHUxIN9rhjnPWgjNtEY0hFXbvQb85SslaLvvECHwBFbvCjOr3rxZwz55VYlJX2VRiO4RItI9JKYQHkDV0BRSws_M2wwAv4XYe9APdEwGO66Mqt3U1HozFzhehOQSGqx9mUe_SHbwAbpqAC0QI6br2w6cDHZl9j6Le1tIpza5xV_rIbtH1QuJMDVq8f-qiI3n0Md1uG51yyeU6_VWJZcWx26qHXMpq-651iSzHXd6RhejkIT9MHVYbleIUIbWs4Kw423oSj-y51dpo"/>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<div class="font-bold text-white text-sm uppercase tracking-wider">TITANIUM ZERO-GAP BLADE</div>
+<div class="text-[10px] text-zinc-500 font-label-caps mt-1">COMPLEMENTARY ACCESSORY</div>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-[10px] text-zinc-500 font-label-caps">QTY: 01</span>
+<span class="font-technical-data text-white">$0.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Totals -->
+<div class="space-y-4 pt-8 border-t border-[#2E2E2E]">
+<div class="flex justify-between">
+<span class="text-[10px] text-zinc-500 font-label-caps">SUBTOTAL</span>
+<span class="font-technical-data text-white">$189.00</span>
+</div>
+<div class="flex justify-between">
+<span class="text-[10px] text-zinc-500 font-label-caps">LOGISTICS</span>
+<span class="font-technical-data text-white">$0.00</span>
+</div>
+<div class="flex justify-between">
+<span class="text-[10px] text-zinc-500 font-label-caps">TAX (EST.)</span>
+<span class="font-technical-data text-white">$15.12</span>
+</div>
+<div class="flex justify-between pt-4 border-t border-[#2E2E2E]">
+<span class="font-label-caps text-white text-sm">TOTAL AMOUNT</span>
+<span class="text-xl font-bold text-[#FF5722]">$204.12</span>
+</div>
+</div>
+<!-- Trust Indicators -->
+<div class="mt-12 p-6 bg-[#0F0F0F] border border-[#2E2E2E] flex items-center gap-4">
+<span class="material-symbols-outlined text-[#FF5722]" data-icon="lock">lock</span>
+<div class="text-[10px] text-zinc-500 font-label-caps leading-relaxed">
+                            ENCRYPTED VIA 256-BIT SSL PROTOCOL. DATA INTEGRITY GUARANTEED BY APEX PRECISION.
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#2E2E2E] bg-[#0F0F0F]">
+<div class="max-w-[1440px] mx-auto px-12 py-24 grid grid-cols-12 gap-8">
+<div class="col-span-12 md:col-span-4">
+<div class="text-white font-black text-xl mb-4">APEX PRECISION</div>
+<p class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em] uppercase text-zinc-500 leading-relaxed">
+                    © 2024 APEX PRECISION GROOMING. ENGINEERED FOR PROFESSIONAL PERFORMANCE.
+                </p>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-wrap gap-x-12 gap-y-4 md:justify-end items-center">
+<a class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em] uppercase text-zinc-500 hover:text-white transition-all" href="#">WARRANTY</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em] uppercase text-zinc-500 hover:text-white transition-all" href="#">PRIVACY</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em] uppercase text-zinc-500 hover:text-white transition-all" href="#">TERMS</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-[0.2em] uppercase text-zinc-500 hover:text-white transition-all" href="#">CONTACT</a>
+</div>
+</div>
+</footer>
+</body></html>
