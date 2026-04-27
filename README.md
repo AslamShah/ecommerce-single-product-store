@@ -138,3 +138,6 @@ curl http://localhost:3001/api/health | jq '.services.mongodb'
 ### MongoDB connection issues
 - Set `USE_IN_MEMORY_MONGODB=true` in backend `.env` for in-memory development
 - Or use MongoDB Atlas by setting `MONGODB_URI` to your Atlas connection string
+
+
+<img width="2150" height="11838" alt="redesigned-space-broccoli-g74pq7vxpjgc97wq-3000 app github dev_" src="https://github.com/user-attachments/assets/2d12b428-22b8-4ac3-b2c8-8c074940d18d" />
