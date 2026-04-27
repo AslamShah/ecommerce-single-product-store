@@ -226,6 +226,13 @@ export default function AdminDashboardPage() {
           <SettingsTab />
         )}
       </div>
+
+      {/* Footer */}
+      <footer className="border-t border-[#2E2E2E] px-6 py-4 mt-8">
+        <p className="text-center font-label-caps text-zinc-600 text-xs">
+          © {new Date().getFullYear()} APEX STORE ADMIN
+        </p>
+      </footer>
     </div>
   );
 }
